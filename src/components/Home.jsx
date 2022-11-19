@@ -5,8 +5,9 @@ import { FeedbackContext } from '../feedbackContext'
 import FeedbackItem from './FeedbackItem'
 import FeedbackStats from './FeedbackStats'
 import FeedbackForm from './FeedbackForm'
+import Spinner from './Spinner'
 function Home() {
-    const { feedBackItems } = useContext(FeedbackContext)
+    const { feedBackItems, isLoading } = useContext(FeedbackContext)
     const feedBackItemElements = feedBackItems.map((item) => {
         return (
             <motion.div
@@ -25,10 +26,12 @@ function Home() {
             </motion.div>
         )
     })
-    return (
+    return isLoading ? (
+        <Spinner />
+    ) : (
         <div className='app-container'>
             <FeedbackForm />
-            {feedBackItems.length > 0 ? (
+            {feedBackItems.length > 0 && !isLoading ? (
                 <FeedbackStats />
             ) : (
                 <h3>No stats to display</h3>
