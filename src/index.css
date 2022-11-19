@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #114b5f;
+    color: #f3e9d2;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+/* 
+
+#88D498
+#C6DABF
+*/

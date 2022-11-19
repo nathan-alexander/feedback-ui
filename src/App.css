@@ -1,0 +1,145 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 4em;
+    text-align: center;
+}
+
+.header {
+    background-color: #1a936f;
+    height: 75px;
+    padding: 1em;
+}
+
+.header-text {
+    margin: 0;
+    font-weight: 700;
+}
+
+.card {
+    background-color: #1a936f;
+    padding: 1em 2em;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.feedback-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+}
+form {
+    width: 100%;
+}
+.btn {
+    border: none;
+    background-color: #88d498;
+    color: #114b5f;
+    padding: 1em 2em;
+    border-radius: 0 15px 15px 0;
+    height: 50px;
+}
+
+.btn:disabled {
+    background-color: lightgray;
+    color: gray;
+}
+
+input[type='text'] {
+    width: 60%;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 15px 0 0 15px;
+    height: 50px;
+}
+
+.message {
+    color: lightcoral;
+    font-size: 14px;
+    margin-top: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0 40px;
+}
+
+.rating li,
+.num-display {
+    position: relative;
+    background: #f4f4f4;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 19px;
+    border: 1px #eee solid;
+    transition: 0.3s;
+}
+
+.rating li label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.rating li:hover,
+.num-display {
+    background: #fff;
+    color: #88d498;
+}
+
+[type='radio'] {
+    opacity: 0;
+}
+
+[type='radio']:checked ~ label {
+    background: #88d498;
+    color: #fff;
+}
+
+.delete-span,
+.edit-span {
+    cursor: pointer;
+    margin: 10px;
+}
+
+.question-mark {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #88d498;
+}
+
+.about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
